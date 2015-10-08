@@ -3,9 +3,15 @@
  * Insane test
  */
 var should = require('should');
+var assert = require('assert');
 
-(5).should.be.exactly(5).and.be.a.Number();
+describe('Test Framework', function () {
+    it('Should have mocha installed and running.'
+        , function () {
+            assert.equal(true, true);
+        })
+    it('should have the library installed and running for fluent testing.', function () {
+        true.should.eql(true);
+    })
 
-var should = require('should/as-function');
-
-should(10).be.exactly(5).and.be.a.Number();
+})
